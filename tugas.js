@@ -21,7 +21,8 @@ async function logUrlResult(url) {
     console.log('Status Code:', response.status);
     const responseJSON = await response.json();
     console.log('Response Content:');
-    console.log(responseJSON);
+    // console.log(responseJSON);
+    console.log(JSON.stringify(responseJSON, null, 2));
   } catch (error) {
     console.log('An error occurred:', error);
   }
@@ -34,7 +35,8 @@ const logUrlResult2 = async (url) => {
     console.log('Status Code:', response.status);
     const responseJSON = await response.json();
     console.log('Response Content:');
-    console.log(responseJSON);
+    // console.log(responseJSON);
+    console.log(JSON.stringify(responseJSON, null, 2));
     return responseJSON;
   } catch (error) {
     console.log('An error occurred:', error);
@@ -56,7 +58,7 @@ const apiURL = 'https://randomuser.me/api/';
 
 // Pemanggilan function
 
-logUrlResult2(apiURL);
+logUrlResult(apiURL);
 // logUrlResult2(endpoint);
 
 
